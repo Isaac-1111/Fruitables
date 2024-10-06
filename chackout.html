@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Fruit - Vegetable Website</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@600;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navbar Start -->
+<div class="container-fluid fixed-top">
+    <div class="container topbar bg-primary d-none d-lg-block">
+        <div class="d-flex justify-content-between">
+            <div class="top-info ps-2">
+                <small class="me-3"><i class="fas fa-map-marker-alt me-2 text-secondary"></i> <a href="#" class="text-white">Kenya</a></small>
+                <small class="me-3"><i class="fas fa-envelope me-2 text-secondary"></i><a href="#" class="text-white">Email@Example.com</a></small>
+            </div>
+            <div class="top-link pe-2">
+                <a href="#" class="text-white"><small class="text-white mx-2">Privacy Policy</small>/</a>
+                <a href="#" class="text-white"><small class="text-white mx-2">Terms of Use</small>/</a>
+                <a href="#" class="text-white"><small class="text-white ms-2">Sales and Refunds</small></a>
+            </div>
+        </div>
+    </div>
+    <div class="container px-0">
+        <nav class="navbar navbar-light bg-white navbar-expand-xl">
+            <a href="index.html" class="navbar-brand"><h1 class="text-primary display-6">Fruitables</h1></a>
+            <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars text-primary"></span>
+            </button>
+            <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
+                <div class="navbar-nav mx-auto">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="shop.html" class="nav-item nav-link">Shop</a>
+                    <a href="shop-detail.html" class="nav-item nav-link">Shop Detail</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
+                        <div class="dropdown-menu m-0 bg-secondary rounded-0">
+                            <a href="cart.html" class="dropdown-item ">Cart</a>
+                            <a href="chackout.html" class="dropdown-item active ">Chackout</a>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+                <div class="d-flex m-3 me-0">
+                    <button class="btn-search btn border border-secondary btn-md-square rounded-circle bg-white me-4" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search text-primary"></i></button>
+                    <a href="#" class="position-relative me-4 my-auto">
+                        <i class="fa fa-shopping-bag fa-2x"></i>
+                        <span class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-dark px-1" style="top: -5px; left: 15px; height: 20px; min-width: 20px;">3</span>
+                    </a>
+                    <a href="#" class="my-auto">
+                        <i class="fas fa-user fa-2x"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+<!-- Navbar End -->
+
+<!-- Page Header -->
+<div class="container-fluid page-header py-5">
+    <h1 class="text-center text-white display-6">Checkout</h1>
+    <ol class="breadcrumb justify-content-center mb-0">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item"><a href="#">Pages</a></li>
+        <li class="breadcrumb-item active text-white">Checkout</li>
+    </ol>
+</div>
+<!-- Page Header End -->
+
+<!-- Checkout Page Start -->
+<div class="container-fluid py-5">
+    <div class="container py-5">
+        <h1 class="mb-4">Billing details</h1>
+        <form action="#">
+            <div class="row g-5">
+                <div class="col-md-12 col-lg-6 col-xl-7">
+                    <!-- Billing Form -->
+                    <div class="form-item w-100">
+                        <label class="form-label my-3">First Name<sup>*</sup></label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-item w-100">
+                        <label class="form-label my-3">Last Name<sup>*</sup></label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <!-- More form fields as per your layout -->
+                </div>
+
+                <div class="col-md-12 col-lg-6 col-xl-5">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Products</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Price</th>
+                                    <th scope="col">Quantity</th>
+                                    <th scope="col">Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Products will be dynamically inserted here -->
+                            </tbody>
+                        </table>
+
+                        <!-- Subtotal and Total -->
+                        <div>
+                            <h5>Subtotal: <span class="subtotal">$0.00</span></h5>
+                            <h5>Total (Including Shipping): <span class="total">$0.00</span></h5>
+                        </div>
+                    </div>
+
+                    <!-- Payment Methods Section -->
+                    <div class="row g-4 text-center align-items-center justify-content-center border-bottom py-3">
+                        <div class="col-12">
+                            <!-- Bank Transfer -->
+                            <div class="form-check text-start my-3">
+                                <input type="radio" class="form-check-input" name="payment-method" value="bank" id="bank-transfer">
+                                <label class="form-check-label" for="bank-transfer">Direct Bank Transfer</label>
+                            </div>
+                            <div id="bank-fields" style="display:none;">
+                                <input type="text" class="form-control mb-2" placeholder="Bank Account Number">
+                                <input type="text" class="form-control mb-2" placeholder="Bank Name">
+                            </div>
+
+                            <!-- PayPal -->
+                            <div class="form-check text-start my-3">
+                                <input type="radio" class="form-check-input" name="payment-method" value="paypal" id="paypal">
+                                <label class="form-check-label" for="paypal">PayPal</label>
+                            </div>
+                            <div id="paypal-fields" style="display:none;">
+                                <input type="email" class="form-control mb-2" placeholder="PayPal Email">
+                            </div>
+
+                            <!-- Mpesa -->
+                            <div class="form-check text-start my-3">
+                                <input type="radio" class="form-check-input" name="payment-method" value="mpesa" id="mpesa">
+                                <label class="form-check-label" for="mpesa">Mpesa</label>
+                            </div>
+                            <div id="mpesa-fields" style="display:none;">
+                                <input type="text" class="form-control mb-2" placeholder="Mpesa Phone Number">
+                            </div>
+
+                            <!-- Bitcoin -->
+                            <div class="form-check text-start my-3">
+                                <input type="radio" class="form-check-input" name="payment-method" value="bitcoin" id="bitcoin">
+                                <label class="form-check-label" for="bitcoin">Bitcoin</label>
+                            </div>
+                            <div id="bitcoin-fields" style="display:none;">
+                                <input type="text" class="form-control mb-2" placeholder="Bitcoin Wallet Address">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+         <a class="btn-link" href=""><button class="btn border-secondary rounded-pill px-4 py-3 text-primary text-uppercase place-order-btn" type="button">PAY</button></a>
+    </div>
+</div>
+<!-- Checkout Page End -->
+
+<!-- Footer Start -->
+<div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5">
+    <div class="container py-5">
+        <div class="pb-4 mb-4" style="border-bottom: 1px solid rgba(226, 175, 24, 0.5) ;">
+            <div class="row g-4">
+                <div class="col-lg-3">
+                    <a href="#">
+                        <h1 class="text-primary mb-0">Fruitables</h1>
+                        <p class="text-secondary mb-0">Fresh products</p>
+                    </a>
+                </div>
+                <div class="col-lg-6">
+                    <div class="position-relative mx-auto">
+                        <input class="form-control border-0 w-100 py-3 px-4 rounded-pill" type="number" placeholder="Your Email">
+                        <button type="submit" class="btn btn-primary border-0 border-secondary py-3 px-4 position-absolute rounded-pill text-white" style="top: 0; right: 0;">Subscribe Now</button>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="d-flex justify-content-end pt-3">
+                        <a class="btn  btn-outline-secondary me-2 btn-md-square rounded-circle" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-secondary me-2 btn-md-square rounded-circle" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-secondary me-2 btn-md-square rounded-circle" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-secondary btn-md-square rounded-circle" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row g-5">
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-item">
+                    <h4 class="text-light mb-3">Why People Like us!</h4>
+                    <p class="mb-4">typesetting, remaining essentially unchanged. It was 
+                        popularised in the 1960s with the like Aldus PageMaker including of Lorem Ipsum.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="d-flex flex-column text-start footer-item">
+                    <h4 class="text-light mb-3">Shop Info</h4>
+                    <a class="btn-link" href="cart.html">Cart</a>
+                    <a class="btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn-link" href="">Privacy Policy</a>
+                    <a class="btn-link" href="">Terms & Condition</a>
+                    <a class="btn-link" href="">Return Policy</a>
+                    <a class="btn-link" href="">FAQs & Help</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="d-flex flex-column text-start footer-item">
+                    <h4 class="text-light mb-3">Account</h4>
+                    <a class="btn-link" href="">My Account</a>
+                    <a class="btn-link" href="">Shop details</a>
+                    <a class="btn-link" href="">Shopping Cart</a>
+                    <a class="btn-link" href="">Wishlist</a>
+                    <a class="btn-link" href="">Order History</a>
+                    <a class="btn-link" href="">International Orders</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-item">
+                    <h4 class="text-light mb-3">Contact</h4>
+                    <p>Address: Kenya</p>
+                    <p>Email: Example@gmail.com</p>
+                    <p>Phone: +254</p>
+                    <p>Payment Accepted</p>
+                   <a class="btn-link" href="chackout.html"> <img src="img/payment.png" class="img-fluid" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
+<!-- Copyright Start -->
+<div class="container-fluid copyright bg-dark py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                <span class="text-light"><a href="#"><i class="fas fa-copyright text-light me-2"></i>Copyright</a>, All right reserved.</span>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Copyright End -->
+
+
+<!-- JavaScript to dynamically load cart items and handle payment method -->
+<script>
+    // Load cart items from localStorage and display them
+    function loadCartItems() {
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const tableBody = document.querySelector('tbody');
+        let total = 0;
+
+        // Clear the table body
+        tableBody.innerHTML = '';
+
+        // Check if there are items in the cart
+        if (cart.length === 0) {
+            tableBody.innerHTML = '<tr><td colspan="5">No items in the cart.</td></tr>';
+            return;
+        }
+
+        // Loop through the cart items and display them in the table
+        cart.forEach(item => {
+            const itemTotal = (item.price * item.quantity).toFixed(2);
+            total += parseFloat(itemTotal);
+
+            tableBody.innerHTML += `
+                <tr>
+                    <th scope="row">
+                        <div class="d-flex align-items-center mt-2">
+                            <img src="img/vegetable-item-2.jpg" class="img-fluid rounded-circle" style="width: 90px; height: 90px;" alt="">
+                        </div>
+                    </th>
+                    <td class="py-5">${item.name}</td>
+                    <td class="py-5">${item.price} $</td>
+                    <td class="py-5">${item.quantity}</td>
+                    <td class="py-5">${itemTotal} $</td>
+                </tr>
+            `;
+        });
+
+        // Update the subtotal and total
+        document.querySelector('.subtotal').textContent = `$${total.toFixed(2)}`;
+        document.querySelector('.total').textContent = `$${(total + calculateShipping()).toFixed(2)}`;
+    }
+
+    // Dummy shipping calculation function (customize based on shipping method)
+    function calculateShipping() {
+        return 15; // Flat rate for demonstration
+    }
+
+    // Function to show relevant payment fields based on selected payment method
+    function showPaymentFields(paymentMethod) {
+        const bankFields = document.getElementById('bank-fields');
+        const paypalFields = document.getElementById('paypal-fields');
+        const mpesaFields = document.getElementById('mpesa-fields');
+        const bitcoinFields = document.getElementById('bitcoin-fields');
+
+        // Hide all payment fields initially
+        bankFields.style.display = 'none';
+        paypalFields.style.display = 'none';
+        mpesaFields.style.display = 'none';
+        bitcoinFields.style.display = 'none';
+
+        // Show the selected payment method fields
+        if (paymentMethod === 'bank') {
+            bankFields.style.display = 'block';
+        } else if (paymentMethod === 'paypal') {
+            paypalFields.style.display = 'block';
+        } else if (paymentMethod === 'mpesa') {
+            mpesaFields.style.display = 'block';
+        } else if (paymentMethod === 'bitcoin') {
+            bitcoinFields.style.display = 'block';
+        }
+    }
+
+    // Event listeners for payment method selection
+    document.querySelectorAll('input[name="payment-method"]').forEach(input => {
+        input.addEventListener('change', function() {
+            showPaymentFields(this.value);
+        });
+    });
+
+    // Load cart items when the page loads
+    window.onload = function() {
+        loadCartItems();
+    };
+</script>
+
+<!-- Include your JS libraries -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
